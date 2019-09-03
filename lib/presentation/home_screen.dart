@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_movie/containers/active_tab.dart';
 import 'package:flutter_movie/containers/movies.dart';
 import 'package:flutter_movie/containers/series.dart';
+import 'package:flutter_movie/containers/tab_selector.dart';
 import 'package:flutter_movie/keys.dart';
 import 'package:flutter_movie/models/models.dart';
 
@@ -33,7 +34,8 @@ class HomeScreenState extends State<HomeScreen> {
             actions: []
           ),
           //body: activeTab == AppTab.movies ? Movies() : Series()
-          body: Text("I'm Home")
+          body: Text("I'm Home"),
+          bottomNavigationBar:  TabSelector(),
         );
       },
     );
