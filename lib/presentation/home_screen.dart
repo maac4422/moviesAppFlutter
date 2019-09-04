@@ -33,8 +33,8 @@ class HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             actions: []
           ),
-          //body: activeTab == AppTab.movies ? Movies() : Series()
-          body: Text("I'm Home"),
+          body: activeTab == AppTab.movies ? Movies() : Movies(),
+          //body: Text("I'm Home"),
           bottomNavigationBar:  TabSelector(),
         );
       },

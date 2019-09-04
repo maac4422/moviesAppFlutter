@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_movie/models/movie.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter_movie/models/models.dart';
 
@@ -6,11 +7,13 @@ import 'package:flutter_movie/models/models.dart';
 class AppState {
   final bool isLoading;
   final AppTab activeTab;
+  final List<Movie> movies;
 
   AppState(
     {
       this.isLoading = false,
-      this.activeTab = AppTab.movies
+      this.activeTab = AppTab.movies,
+      this.movies = const [],
     }
   );
 
@@ -19,10 +22,12 @@ class AppState {
   AppState copyWith({
     bool isLoading,
     AppTab activeTab,
+    List<Movie> movies
   }) {
     return AppState(
       isLoading:  isLoading ?? this.isLoading,
-      activeTab: activeTab ?? this.activeTab
+      activeTab: activeTab ?? this.activeTab,
+      movies: movies ?? this.movies,
     );
   }
 }
